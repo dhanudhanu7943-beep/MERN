@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //task1
+
+     const arr=[10,20, 30,40]
+     const great=arr.some((arr)=>arr>35)
+     console.log(great,"great");
+     
+console.log("2.Students scored above 50 using every().");
+//TASK-2
+
+const students=[{Name:"Moni" ,Score:78},
+{Name:"Dhanam",Score:89},
+{Name : "suva",Score:40}];
+const mark=students.every((students)=>students.mark>50)
+console.log(mark,"mark");
+
+
+//Task-3
+console.log("3.admin exists in a roles array using includes().");
+
+const roles=["user","admin","salary"]
+const array=roles.includes("admin")
+console.log(array);
+
+//task-4
+console.log("4.Calculate the total salary of five employees using reduce()");
+const detail=[
+    { name: "Ravi", salary: 25000 },
+    { name: "Priya", salary: 30000 },
+    { name: "Kumar", salary: 35000 },
+    { name: "Divya", salary: 40000 },
+    { name: "Arun", salary: 45000 }];
+const total=detail.reduce((accumlator,current)=>{
+return accumlator+current.salary
+},0)
+console.log(total);
+
+
+
+//Task-5
+console.log("5.Calculate a shopping cart's total using price * quantity.");
+
+const cart = [
+    { name: "Laptop", quantity: 1, price: 50000 },
+    { name: "Mouse", quantity: 2, price: 500 },
+    { name: "Keyboard", quantity: 1, price: 1500 },
+    { name: "Headphones", quantity: 2, price: 2000 },
+    { name: "Monitor", quantity: 1, price: 12000 }
+];
+const totals=cart.reduce((val,get)=>{
+return val+get.price*get.quantity
+},0)
+console.log(totals);
+
+
+//Task-7
+console.log("7.Find a student by ID using find");
+
+const std=[{ID:21,name:"dhanu"},{ID:22,name:"madthu"}]
+const findstd=std.find((std)=>std.ID===22)
+console.log(findstd);
+
+
+
+
+
+</script>
+    
+</body>
+</html>
