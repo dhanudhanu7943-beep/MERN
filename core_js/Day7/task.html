@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY7</title>
+</head>
+<body>
+    <script>
+     //task1
+      console.log("1.pass or fail");
+
+     const mypromise = new Promise((resolve,reject)=>{
+            const mark=60
+            if(mark>=35) {
+                resolve("passed")
+            } else{
+                reject("failed")
+            }
+     
+
+    })
+
+    .then((result)=>{
+       console.log(result);
+       
+    })
+    .catch((error)=>{
+      console.log(error);
+      
+     })
+
+    //task2
+    console.log("2. Login Validation");
+
+
+    
+    const login = new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        if(name ==="admin" && pass==="1234"){
+        resolve("login successfully")
+        }else{
+            reject("invalid")
+        }
+       },2000);
+        
+    });
+    
+    const name="admin";
+    const pass="1234";
+
+    login.then(console.log).catch(console.log);
+    
+    //task3
+    console.log("3.Product Price Calculation");
+
+     
+    
+     
+     
+
+
+    </script>
+</body>
+</html>
